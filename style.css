@@ -246,11 +246,11 @@ a { color: inherit; }
 .spec-card {
   position: relative;
   border-radius: 6px;
-  border: 1px solid var(--line);
-  background-color: var(--paper);
+  border: 1px solid #DDD2B0;
+  background-color: #EFE8D6;
   background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    linear-gradient(#DDD2B0 1px, transparent 1px),
+    linear-gradient(90deg, #DDD2B0 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: -1px -1px;
   padding: 18px 20px 22px;
