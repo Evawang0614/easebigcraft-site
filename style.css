@@ -307,10 +307,17 @@ a { color: inherit; }
 }
 .spec-callout .label { color: var(--ink); font-weight: 600; }
 .spec-callout .sub { color: var(--ink-soft); }
+.spec-annotation {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--bamboo-dk);
+  margin: 14px 0 0;
+}
 .spec-moq {
-  position: absolute;
-  left: 20px;
-  bottom: 18px;
+  position: static;
+  display: inline-block;
+  margin-top: 10px;
   font-family: var(--font-mono);
   font-size: 0.65rem;
   line-height: 1.4;
