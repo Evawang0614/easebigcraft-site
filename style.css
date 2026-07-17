@@ -198,15 +198,17 @@ a { color: inherit; }
 .hero-visual {
   position: relative;
   overflow: hidden;
-  padding: 32px 32px 32px 0;
+  padding: 32px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hero-stack {
   display: flex;
   flex-direction: column;
   gap: 18px;
   width: 100%;
+  max-width: 420px;
 }
 
 /* Photo card */
