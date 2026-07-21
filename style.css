@@ -599,6 +599,13 @@ a { color: inherit; }
   border: 1px solid var(--line);
   margin: 16px 0 8px;
 }
+.handle-style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 8px 0 16px;
+}
+.handle-style-grid img { margin: 0; }
 .img-caption {
   font-size: 0.85rem;
   font-style: italic;
@@ -631,6 +638,43 @@ a { color: inherit; }
   width: auto;
   accent-color: var(--forest);
 }
+
+/* ============ Image lightbox / zoom ============ */
+.gallery-main img {
+  cursor: zoom-in;
+}
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 36, 23, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px;
+}
+.lightbox-overlay.is-open { display: flex; }
+.lightbox-overlay .lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  cursor: default;
+}
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  font-family: var(--font-body);
+}
+.lightbox-close:hover { opacity: 0.7; }
 
 /* ============ Footer ============ */
 .site-footer {
@@ -763,6 +807,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .capabilities-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
+  .handle-style-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   .product-grid { grid-template-columns: 1fr; }
