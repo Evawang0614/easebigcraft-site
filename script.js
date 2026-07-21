@@ -50,3 +50,24 @@ if (form) {
     }
   });
 }
+
+// Product gallery: click a thumbnail to swap it into the main image
+const galleryMainImg = document.querySelector('.gallery-main img');
+const galleryThumbs = document.querySelectorAll('.gallery-thumbs img');
+
+if (galleryMainImg && galleryThumbs.length) {
+  galleryThumbs.forEach(thumb => {
+    thumb.style.cursor = 'pointer';
+    thumb.addEventListener('click', () => {
+      const newMainSrc = thumb.src;
+      const newMainAlt = thumb.alt;
+
+      // Swap: the clicked thumbnail becomes the main image,
+      // and the old main image takes its place in the thumbnail row.
+      thumb.src = galleryMainImg.src;
+      thumb.alt = galleryMainImg.alt;
+      galleryMainImg.src = newMainSrc;
+      galleryMainImg.alt = newMainAlt;
+    });
+  });
+}
