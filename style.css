@@ -591,6 +591,47 @@ a { color: inherit; }
 }
 .form-note { font-size: 0.8rem; color: var(--ink-soft); margin: 0; text-align: center; }
 
+/* ============ Product description image + checkbox group ============ */
+.product-description-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  margin: 16px 0 8px;
+}
+.img-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: -4px;
+}
+.checkbox-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 4px;
+}
+.checkbox-group legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  padding: 0;
+}
+.checkbox-group label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--ink);
+  padding: 4px 0;
+}
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--forest);
+}
+
 /* ============ Footer ============ */
 .site-footer {
   background: var(--forest-dk);
