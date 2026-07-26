@@ -710,6 +710,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
+.why-us { max-width: 780px; }
+.why-us h2 { margin-bottom: 0.6em; }
+.why-us p { font-size: 0.98rem; }
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.type-thumb {
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+.type-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (max-width: 700px) {
+  .types-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ============ WhatsApp float button ============ */
 .whatsapp-float {
   position: fixed;
